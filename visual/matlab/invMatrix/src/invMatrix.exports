@@ -1,0 +1,6 @@
+invMatrixInitialize
+invMatrixInitializeWithHandlers
+invMatrixTerminate
+invMatrixPrintStackTrace
+invMatrixGetMcrID
+mlxAmberg
