@@ -239,7 +239,7 @@ pcl::IterativeClosestPointWithNormals<PointSource, PointTarget, Scalar, MatrixTy
 
 ///////////////////////////////////////////////////////////////////////////////////////////
 template <typename PointSource, typename PointTarget, typename Scalar> void
-pcl::IterativeClosestPointNonRigid<PointSource, PointTarget, Scalar>::transformCloud (
+pcl::IterativeClosestPointNonrigid<PointSource, PointTarget, Scalar>::transformCloud (
     const PointCloudSource &input,
     PointCloudSource &output,
     const Eigen::MatrixXf &transform)
@@ -310,8 +310,8 @@ pcl::IterativeClosestPointNonRigid<PointSource, PointTarget, Scalar>::transformC
 ///////////////////////////////////////////////////////////////////////////////////////////
 template <typename PointSource, typename PointTarget, typename Scalar> void
 pcl::IterativeClosestPointNonrigid<PointSource, PointTarget, Scalar>::computeTransformation (
-    PointCloudSource &output, const Eigen::MatrixXf &guess)
-{
+		PointCloudSource &output, const Eigen::MatrixXf &guess)
+{/*
   // Point cloud containing the correspondences of each point in <input, indices>
   PointCloudSourcePtr input_transformed (new PointCloudSource);
 
@@ -417,7 +417,7 @@ pcl::IterativeClosestPointNonrigid<PointSource, PointTarget, Scalar>::computeTra
   // Copy all the values
   output = *input_;
   // Transform the XYZ + normals
-  transformCloud (*input_, output, final_transformation_);
+  transformCloud (*input_, output, final_transformation_);*/
 }
 
 #endif /* PCL_REGISTRATION_IMPL_ICP_HPP_ */

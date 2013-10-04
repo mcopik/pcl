@@ -333,7 +333,43 @@ namespace pcl
   class IterativeClosestPointNonrigid : public IterativeClosestPoint<PointSource, PointTarget, Scalar, Eigen::MatrixXf>
   {
   	  public:
-      /** \brief Empty destructor */
+      typedef typename IterativeClosestPoint<PointSource, PointTarget, Scalar, Eigen::MatrixXf>::PointCloudSource PointCloudSource;
+      typedef typename IterativeClosestPoint<PointSource, PointTarget, Scalar, Eigen::MatrixXf>::PointCloudTarget PointCloudTarget;
+      typedef typename PointCloudSource::Ptr PointCloudSourcePtr;
+      typedef typename PointCloudSource::ConstPtr PointCloudSourceConstPtr;
+      typedef typename PointCloudTarget::Ptr PointCloudTargetPtr;
+      typedef typename PointCloudTarget::ConstPtr PointCloudTargetConstPtr;
+      typename pcl::registration::DefaultConvergenceCriteria<Scalar>::Ptr convergence_criteria_;
+
+      using IterativeClosestPoint<PointSource, PointTarget, Scalar, Eigen::MatrixXf>::reg_name_;
+      using IterativeClosestPoint<PointSource, PointTarget, Scalar, Eigen::MatrixXf>::getClassName;
+      using IterativeClosestPoint<PointSource, PointTarget, Scalar, Eigen::MatrixXf>::setInputSource;
+      using IterativeClosestPoint<PointSource, PointTarget, Scalar, Eigen::MatrixXf>::input_;
+      using IterativeClosestPoint<PointSource, PointTarget, Scalar, Eigen::MatrixXf>::indices_;
+      using IterativeClosestPoint<PointSource, PointTarget, Scalar, Eigen::MatrixXf>::target_;
+      using IterativeClosestPoint<PointSource, PointTarget, Scalar, Eigen::MatrixXf>::nr_iterations_;
+      using IterativeClosestPoint<PointSource, PointTarget, Scalar, Eigen::MatrixXf>::max_iterations_;
+      using IterativeClosestPoint<PointSource, PointTarget, Scalar, Eigen::MatrixXf>::previous_transformation_;
+      using IterativeClosestPoint<PointSource, PointTarget, Scalar, Eigen::MatrixXf>::final_transformation_;
+      using IterativeClosestPoint<PointSource, PointTarget, Scalar, Eigen::MatrixXf>::transformation_;
+      using IterativeClosestPoint<PointSource, PointTarget, Scalar, Eigen::MatrixXf>::transformation_epsilon_;
+      using IterativeClosestPoint<PointSource, PointTarget, Scalar, Eigen::MatrixXf>::converged_;
+      using IterativeClosestPoint<PointSource, PointTarget, Scalar, Eigen::MatrixXf>::corr_dist_threshold_;
+      using IterativeClosestPoint<PointSource, PointTarget, Scalar, Eigen::MatrixXf>::inlier_threshold_;
+      using IterativeClosestPoint<PointSource, PointTarget, Scalar, Eigen::MatrixXf>::min_number_correspondences_;
+      using IterativeClosestPoint<PointSource, PointTarget, Scalar, Eigen::MatrixXf>::update_visualizer_;
+      using IterativeClosestPoint<PointSource, PointTarget, Scalar, Eigen::MatrixXf>::euclidean_fitness_epsilon_;
+      using IterativeClosestPoint<PointSource, PointTarget, Scalar, Eigen::MatrixXf>::correspondences_;
+      using IterativeClosestPoint<PointSource, PointTarget, Scalar, Eigen::MatrixXf>::transformation_estimation_;
+      using IterativeClosestPoint<PointSource, PointTarget, Scalar, Eigen::MatrixXf>::correspondence_estimation_;
+      using IterativeClosestPoint<PointSource, PointTarget, Scalar, Eigen::MatrixXf>::correspondence_rejectors_;
+      using IterativeClosestPoint<PointSource, PointTarget, Scalar, Eigen::MatrixXf>::x_idx_offset_;
+      using IterativeClosestPoint<PointSource, PointTarget, Scalar, Eigen::MatrixXf>::y_idx_offset_;
+      using IterativeClosestPoint<PointSource, PointTarget, Scalar, Eigen::MatrixXf>::z_idx_offset_;
+      using IterativeClosestPoint<PointSource, PointTarget, Scalar, Eigen::MatrixXf>::nx_idx_offset_;
+      using IterativeClosestPoint<PointSource, PointTarget, Scalar, Eigen::MatrixXf>::ny_idx_offset_;
+      using IterativeClosestPoint<PointSource, PointTarget, Scalar, Eigen::MatrixXf>::nz_idx_offset_;
+      using IterativeClosestPoint<PointSource, PointTarget, Scalar, Eigen::MatrixXf>::source_has_normals_;
       virtual ~IterativeClosestPointNonrigid () {}
 
   	  protected:
@@ -346,7 +382,7 @@ namespace pcl
         */
       virtual void
       transformCloud (const PointCloudSource &input,
-                      PointCloudSource &output,
+    		  	  	  PointCloudSource &output,
                       const Eigen::MatrixXf &transform);
       /** \brief Rigid transformation computation method  with initial guess.
 	  * \param output the transformed input point cloud dataset using the rigid transformation found
