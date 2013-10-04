@@ -95,11 +95,11 @@ namespace pcl
   class IterativeClosestPoint : public Registration<PointSource, PointTarget, Scalar, MatrixType>
   {
     public:
-      typedef typename Registration<PointSource, PointTarget, Scalar>::PointCloudSource PointCloudSource;
+      typedef typename Registration<PointSource, PointTarget, Scalar, MatrixType>::PointCloudSource PointCloudSource;
       typedef typename PointCloudSource::Ptr PointCloudSourcePtr;
       typedef typename PointCloudSource::ConstPtr PointCloudSourceConstPtr;
 
-      typedef typename Registration<PointSource, PointTarget, Scalar>::PointCloudTarget PointCloudTarget;
+      typedef typename Registration<PointSource, PointTarget, Scalar, MatrixType>::PointCloudTarget PointCloudTarget;
       typedef typename PointCloudTarget::Ptr PointCloudTargetPtr;
       typedef typename PointCloudTarget::ConstPtr PointCloudTargetConstPtr;
 
@@ -327,8 +327,36 @@ namespace pcl
                       PointCloudSource &output, 
                       const MatrixType &transform);
   };
-}
 
+
+  template <typename PointSource, typename PointTarget,typename Scalar>
+  class IterativeClosestPointNonrigid : public IterativeClosestPoint<PointSource, PointTarget, Scalar, Eigen::MatrixXf>
+  {
+  	  public:
+      /** \brief Empty destructor */
+      virtual ~IterativeClosestPointNonrigid () {}
+
+  	  protected:
+
+      /** \brief Apply a rigid transform to a given dataset
+        * \param[in] input the input point cloud
+        * \param[out] output the resultant output point cloud
+        * \param[in] transform a 4x4 rigid transformation
+        * \note Can be used with cloud_in equal to cloud_out
+        */
+      virtual void
+      transformCloud (const PointCloudSource &input,
+                      PointCloudSource &output,
+                      const Eigen::MatrixXf &transform);
+      /** \brief Rigid transformation computation method  with initial guess.
+	  * \param output the transformed input point cloud dataset using the rigid transformation found
+	  * \param guess the initial guess of the transformation to compute
+	  */
+		virtual void
+		computeTransformation (PointCloudSource &output, const Eigen::MatrixXf &guess);
+  };
+
+}
 #include <pcl/registration/impl/icp.hpp>
 
 #endif  //#ifndef PCL_ICP_H_

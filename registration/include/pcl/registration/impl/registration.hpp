@@ -129,7 +129,7 @@ pcl::Registration<PointSource, PointTarget, Scalar, Matrix>::getFitnessScore (
 
 //////////////////////////////////////////////////////////////////////////////////////////////
 template <typename PointSource, typename PointTarget, typename Scalar, typename MatrixType> inline double
-pcl::Registration<PointSource, PointTarget, Scalar, MatrixType>::getFitnessScore (double max_range)
+pcl::Registration<PointSource, PointTarget, Scalar, MatrixType >::getFitnessScore (double max_range)
 {
 
   double fitness_score = 0.0;
@@ -178,7 +178,6 @@ pcl::Registration<PointSource, PointTarget, Scalar, MatrixType>::getFitnessScore
     return (std::numeric_limits<double>::max ());
 
 }
-
 //////////////////////////////////////////////////////////////////////////////////////////////
 template <typename PointSource, typename PointTarget, typename Scalar, typename MatrixType> inline void
 pcl::Registration<PointSource, PointTarget, Scalar, MatrixType>::align (PointCloudSource &output)
