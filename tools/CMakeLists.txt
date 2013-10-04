@@ -99,6 +99,9 @@ if (build)
 
   PCL_ADD_EXECUTABLE(pcl_icp2d ${SUBSYS_NAME} icp2d.cpp)
   target_link_libraries(pcl_icp2d pcl_common pcl_io pcl_registration)
+  
+  PCL_ADD_EXECUTABLE(pcl_iterative_closest_point ${SUBSYS_NAME} iterative_closest_point.cpp)
+  target_link_libraries(pcl_iterative_closest_point pcl_common pcl_io pcl_registration)
 
   PCL_ADD_EXECUTABLE(pcl_elch ${SUBSYS_NAME} elch.cpp)
   target_link_libraries(pcl_elch pcl_common pcl_io pcl_registration)

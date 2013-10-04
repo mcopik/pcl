@@ -39,23 +39,23 @@
  */
 
 ///////////////////////////////////////////////////////////////////////////////////////////
-template <typename PointSource, typename PointTarget, typename Scalar> void
-pcl::Registration<PointSource, PointTarget, Scalar>::setInputCloud (
-    const typename pcl::Registration<PointSource, PointTarget, Scalar>::PointCloudSourceConstPtr &cloud)
+template <typename PointSource, typename PointTarget, typename Scalar, typename MatrixType> void
+pcl::Registration<PointSource, PointTarget, Scalar, MatrixType>::setInputCloud (
+    const typename pcl::Registration<PointSource, PointTarget, Scalar, MatrixType>::PointCloudSourceConstPtr &cloud)
 {
   setInputSource (cloud);
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////
-template <typename PointSource, typename PointTarget, typename Scalar> typename pcl::Registration<PointSource, PointTarget, Scalar>::PointCloudSourceConstPtr const
-pcl::Registration<PointSource, PointTarget, Scalar>::getInputCloud ()
+template <typename PointSource, typename PointTarget, typename Scalar,typename MatrixType> typename pcl::Registration<PointSource, PointTarget, Scalar, MatrixType>::PointCloudSourceConstPtr const
+pcl::Registration<PointSource, PointTarget, Scalar, MatrixType>::getInputCloud ()
 {
   return (getInputSource ());
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////
-template <typename PointSource, typename PointTarget, typename Scalar> inline void
-pcl::Registration<PointSource, PointTarget, Scalar>::setInputTarget (const PointCloudTargetConstPtr &cloud)
+template <typename PointSource, typename PointTarget, typename Scalar, typename MatrixType> inline void
+pcl::Registration<PointSource, PointTarget, Scalar, MatrixType>::setInputTarget (const PointCloudTargetConstPtr &cloud)
 {
   if (cloud->points.empty ())
   {
@@ -67,8 +67,8 @@ pcl::Registration<PointSource, PointTarget, Scalar>::setInputTarget (const Point
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////
-template <typename PointSource, typename PointTarget, typename Scalar> bool
-pcl::Registration<PointSource, PointTarget, Scalar>::initCompute ()
+template <typename PointSource, typename PointTarget, typename Scalar, typename MatrixType> bool
+pcl::Registration<PointSource, PointTarget, Scalar, MatrixType>::initCompute ()
 {
   if (!target_)
   {
@@ -98,8 +98,8 @@ pcl::Registration<PointSource, PointTarget, Scalar>::initCompute ()
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////
-template <typename PointSource, typename PointTarget, typename Scalar> bool
-pcl::Registration<PointSource, PointTarget, Scalar>::initComputeReciprocal ()
+template <typename PointSource, typename PointTarget, typename Scalar, typename MatrixType> bool
+pcl::Registration<PointSource, PointTarget, Scalar, MatrixType>::initComputeReciprocal ()
 {
   if (!input_)
   {
@@ -116,8 +116,8 @@ pcl::Registration<PointSource, PointTarget, Scalar>::initComputeReciprocal ()
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////
-template <typename PointSource, typename PointTarget, typename Scalar> inline double
-pcl::Registration<PointSource, PointTarget, Scalar>::getFitnessScore (
+template <typename PointSource, typename PointTarget, typename Scalar, typename Matrix> inline double
+pcl::Registration<PointSource, PointTarget, Scalar, Matrix>::getFitnessScore (
     const std::vector<float> &distances_a,
     const std::vector<float> &distances_b)
 {
@@ -128,8 +128,8 @@ pcl::Registration<PointSource, PointTarget, Scalar>::getFitnessScore (
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////
-template <typename PointSource, typename PointTarget, typename Scalar> inline double
-pcl::Registration<PointSource, PointTarget, Scalar>::getFitnessScore (double max_range)
+template <typename PointSource, typename PointTarget, typename Scalar, typename MatrixType> inline double
+pcl::Registration<PointSource, PointTarget, Scalar, MatrixType>::getFitnessScore (double max_range)
 {
 
   double fitness_score = 0.0;
@@ -180,15 +180,15 @@ pcl::Registration<PointSource, PointTarget, Scalar>::getFitnessScore (double max
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////
-template <typename PointSource, typename PointTarget, typename Scalar> inline void
-pcl::Registration<PointSource, PointTarget, Scalar>::align (PointCloudSource &output)
+template <typename PointSource, typename PointTarget, typename Scalar, typename MatrixType> inline void
+pcl::Registration<PointSource, PointTarget, Scalar, MatrixType>::align (PointCloudSource &output)
 {
   align (output, Matrix4::Identity ());
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////
-template <typename PointSource, typename PointTarget, typename Scalar> inline void
-pcl::Registration<PointSource, PointTarget, Scalar>::align (PointCloudSource &output, const Matrix4& guess)
+template <typename PointSource, typename PointTarget, typename Scalar, typename MatrixType> inline void
+pcl::Registration<PointSource, PointTarget, Scalar, MatrixType>::align (PointCloudSource &output, const Matrix4& guess)
 {
   if (!initCompute ()) 
     return;

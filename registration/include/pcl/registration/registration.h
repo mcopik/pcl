@@ -58,7 +58,8 @@ namespace pcl
     * \author Radu B. Rusu, Michael Dixon
     * \ingroup registration
     */
-  template <typename PointSource, typename PointTarget, typename Scalar = float>
+  template <typename PointSource, typename PointTarget, typename Scalar = float,
+		  typename MatrixType = Eigen::Matrix<Scalar,4,4> >
   class Registration : public PCLBase<PointSource>
   {
     public:
@@ -498,13 +499,13 @@ namespace pcl
       PointCloudTargetConstPtr target_;
 
       /** \brief The final transformation matrix estimated by the registration method after N iterations. */
-      Matrix4 final_transformation_;
+      MatrixType final_transformation_;
 
       /** \brief The transformation matrix estimated by the registration method. */
-      Matrix4 transformation_;
+      MatrixType transformation_;
 
       /** \brief The previous transformation matrix estimated by the registration method (used internally). */
-      Matrix4 previous_transformation_;
+      MatrixType previous_transformation_;
 
       /** \brief The maximum difference between two consecutive transformations in order to consider convergence 
         * (user defined). 

@@ -45,11 +45,11 @@
 #include <pcl/correspondence.h>
 
 ///////////////////////////////////////////////////////////////////////////////////////////
-template <typename PointSource, typename PointTarget, typename Scalar> void
-pcl::IterativeClosestPoint<PointSource, PointTarget, Scalar>::transformCloud (
+template <typename PointSource, typename PointTarget, typename Scalar, typename MatrixType> void
+pcl::IterativeClosestPoint<PointSource, PointTarget, Scalar, MatrixType>::transformCloud (
     const PointCloudSource &input, 
     PointCloudSource &output, 
-    const Matrix4 &transform)
+    const MatrixType &transform)
 {
   Eigen::Vector4f pt (0.0f, 0.0f, 0.0f, 1.0f), pt_t;
   Eigen::Matrix4f tr = transform.template cast<float> ();
@@ -115,9 +115,9 @@ pcl::IterativeClosestPoint<PointSource, PointTarget, Scalar>::transformCloud (
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////
-template <typename PointSource, typename PointTarget, typename Scalar> void
-pcl::IterativeClosestPoint<PointSource, PointTarget, Scalar>::computeTransformation (
-    PointCloudSource &output, const Matrix4 &guess)
+template <typename PointSource, typename PointTarget, typename Scalar, typename MatrixType> void
+pcl::IterativeClosestPoint<PointSource, PointTarget, Scalar, MatrixType>::computeTransformation (
+    PointCloudSource &output, const MatrixType &guess)
 {
   // Point cloud containing the correspondences of each point in <input, indices>
   PointCloudSourcePtr input_transformed (new PointCloudSource);
@@ -228,11 +228,11 @@ pcl::IterativeClosestPoint<PointSource, PointTarget, Scalar>::computeTransformat
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////
-template <typename PointSource, typename PointTarget, typename Scalar> void
-pcl::IterativeClosestPointWithNormals<PointSource, PointTarget, Scalar>::transformCloud (
+template <typename PointSource, typename PointTarget, typename Scalar, typename MatrixType> void
+pcl::IterativeClosestPointWithNormals<PointSource, PointTarget, Scalar, MatrixType>::transformCloud (
     const PointCloudSource &input, 
     PointCloudSource &output, 
-    const Matrix4 &transform)
+    const MatrixType &transform)
 {
   pcl::transformPointCloudWithNormals (input, output, transform);
 }
