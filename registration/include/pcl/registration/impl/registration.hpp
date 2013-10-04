@@ -182,12 +182,12 @@ pcl::Registration<PointSource, PointTarget, Scalar, MatrixType >::getFitnessScor
 template <typename PointSource, typename PointTarget, typename Scalar, typename MatrixType> inline void
 pcl::Registration<PointSource, PointTarget, Scalar, MatrixType>::align (PointCloudSource &output)
 {
-  align (output, Matrix4::Identity ());
+  align (output, MatrixType::Identity ());
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////
 template <typename PointSource, typename PointTarget, typename Scalar, typename MatrixType> inline void
-pcl::Registration<PointSource, PointTarget, Scalar, MatrixType>::align (PointCloudSource &output, const Matrix4& guess)
+pcl::Registration<PointSource, PointTarget, Scalar, MatrixType>::align (PointCloudSource &output, const MatrixType& guess)
 {
   if (!initCompute ()) 
     return;
@@ -220,7 +220,7 @@ pcl::Registration<PointSource, PointTarget, Scalar, MatrixType>::align (PointClo
 
   // Perform the actual transformation computation
   converged_ = false;
-  final_transformation_ = transformation_ = previous_transformation_ = Matrix4::Identity ();
+  final_transformation_ = transformation_ = previous_transformation_ = MatrixType::Identity ();
 
   // Right before we estimate the transformation, we set all the point.data[3] values to 1 to aid the rigid 
   // transformation

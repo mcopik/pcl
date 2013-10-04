@@ -107,9 +107,9 @@ namespace pcl
         , max_iterations_ (10)
         , ransac_iterations_ (0)
         , target_ ()
-        , final_transformation_ (Matrix4::Identity ())
-        , transformation_ (Matrix4::Identity ())
-        , previous_transformation_ (Matrix4::Identity ())
+        , final_transformation_ (MatrixType::Identity ())
+        , transformation_ (MatrixType::Identity ())
+        , previous_transformation_ (MatrixType::Identity ())
         , transformation_epsilon_ (0.0)
         , euclidean_fitness_epsilon_ (-std::numeric_limits<double>::max ())
         , corr_dist_threshold_ (std::sqrt (std::numeric_limits<double>::max ()))
@@ -268,11 +268,11 @@ namespace pcl
       }
 
       /** \brief Get the final transformation matrix estimated by the registration method. */
-      inline Matrix4
+      inline MatrixType
       getFinalTransformation () { return (final_transformation_); }
 
       /** \brief Get the last incremental transformation matrix estimated by the registration method. */
-      inline Matrix4
+      inline MatrixType
       getLastIncrementalTransformation () { return (transformation_); }
 
       /** \brief Set the maximum number of iterations the internal optimization should run for.
@@ -412,7 +412,7 @@ namespace pcl
         * \param[in] guess the initial gross estimation of the transformation
         */
       inline void 
-      align (PointCloudSource &output, const Matrix4& guess);
+      align (PointCloudSource &output, const MatrixType& guess);
 
       /** \brief Abstract class get name method. */
       inline const std::string&
@@ -591,7 +591,7 @@ namespace pcl
 
       /** \brief Abstract transformation computation method with initial guess */
       virtual void 
-      computeTransformation (PointCloudSource &output, const Matrix4& guess) = 0;
+      computeTransformation (PointCloudSource &output, const MatrixType& guess) = 0;
 
     private:
       /** \brief The point representation used (internal). */

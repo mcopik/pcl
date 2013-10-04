@@ -130,6 +130,10 @@ compute (const sensor_msgs::PointCloud2::ConstPtr &source,
   
   CorrespondenceRejectorTrimmed::Ptr cor_rej_tri (new CorrespondenceRejectorTrimmed);
 
+  //TEST
+  IterativeClosestPointNonrigid<PointNormal, PointNormal, Scalar> icp2;
+  icp2.setTransformationEstimation (te);
+
   IterativeClosestPoint<PointNormal, PointNormal, Scalar> icp;
   icp.setCorrespondenceEstimation (cens);
   icp.setTransformationEstimation (te);
