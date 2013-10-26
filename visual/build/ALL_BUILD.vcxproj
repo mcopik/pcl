@@ -1,0 +1,380 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{FC28CC46-2C0D-420C-830C-B80265B7B100}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:/Program Files/PCL 1.3.1/3rdParty/VTK 5.8.0/include/vtk-5.8;C:/Program Files/PCL 1.3.1/include/pcl-1.3;C:/Program Files/PCL 1.3.1/3rdParty/Eigen/include;C:/Program Files/PCL 1.3.1/3rdParty/Boost/include;C:/Program Files (x86)/OpenNI/Include;C:/Program Files/PCL 1.3.1/3rdParty/flann/include;C:/Program Files/PCL 1.3.1/3rdParty/qhull/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:/Program Files/PCL 1.3.1/3rdParty/VTK 5.8.0/include/vtk-5.8;C:/Program Files/PCL 1.3.1/include/pcl-1.3;C:/Program Files/PCL 1.3.1/3rdParty/Eigen/include;C:/Program Files/PCL 1.3.1/3rdParty/Boost/include;C:/Program Files (x86)/OpenNI/Include;C:/Program Files/PCL 1.3.1/3rdParty/flann/include;C:/Program Files/PCL 1.3.1/3rdParty/qhull/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:/Program Files/PCL 1.3.1/3rdParty/VTK 5.8.0/include/vtk-5.8;C:/Program Files/PCL 1.3.1/include/pcl-1.3;C:/Program Files/PCL 1.3.1/3rdParty/Eigen/include;C:/Program Files/PCL 1.3.1/3rdParty/Boost/include;C:/Program Files (x86)/OpenNI/Include;C:/Program Files/PCL 1.3.1/3rdParty/flann/include;C:/Program Files/PCL 1.3.1/3rdParty/qhull/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:/Program Files/PCL 1.3.1/3rdParty/VTK 5.8.0/include/vtk-5.8;C:/Program Files/PCL 1.3.1/include/pcl-1.3;C:/Program Files/PCL 1.3.1/3rdParty/Eigen/include;C:/Program Files/PCL 1.3.1/3rdParty/Boost/include;C:/Program Files (x86)/OpenNI/Include;C:/Program Files/PCL 1.3.1/3rdParty/flann/include;C:/Program Files/PCL 1.3.1/3rdParty/qhull/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:/Program Files/PCL 1.3.1/3rdParty/VTK 5.8.0/include/vtk-5.8;C:/Program Files/PCL 1.3.1/include/pcl-1.3;C:/Program Files/PCL 1.3.1/3rdParty/Eigen/include;C:/Program Files/PCL 1.3.1/3rdParty/Boost/include;C:/Program Files (x86)/OpenNI/Include;C:/Program Files/PCL 1.3.1/3rdParty/flann/include;C:/Program Files/PCL 1.3.1/3rdParty/qhull/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:/Program Files/PCL 1.3.1/3rdParty/VTK 5.8.0/include/vtk-5.8;C:/Program Files/PCL 1.3.1/include/pcl-1.3;C:/Program Files/PCL 1.3.1/3rdParty/Eigen/include;C:/Program Files/PCL 1.3.1/3rdParty/Boost/include;C:/Program Files (x86)/OpenNI/Include;C:/Program Files/PCL 1.3.1/3rdParty/flann/include;C:/Program Files/PCL 1.3.1/3rdParty/qhull/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:/Program Files/PCL 1.3.1/3rdParty/VTK 5.8.0/include/vtk-5.8;C:/Program Files/PCL 1.3.1/include/pcl-1.3;C:/Program Files/PCL 1.3.1/3rdParty/Eigen/include;C:/Program Files/PCL 1.3.1/3rdParty/Boost/include;C:/Program Files (x86)/OpenNI/Include;C:/Program Files/PCL 1.3.1/3rdParty/flann/include;C:/Program Files/PCL 1.3.1/3rdParty/qhull/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>C:/Program Files/PCL 1.3.1/3rdParty/VTK 5.8.0/include/vtk-5.8;C:/Program Files/PCL 1.3.1/include/pcl-1.3;C:/Program Files/PCL 1.3.1/3rdParty/Eigen/include;C:/Program Files/PCL 1.3.1/3rdParty/Boost/include;C:/Program Files (x86)/OpenNI/Include;C:/Program Files/PCL 1.3.1/3rdParty/flann/include;C:/Program Files/PCL 1.3.1/3rdParty/qhull/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="CMakeFiles\ALL_BUILD.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Build all projects</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Build all projects</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/iterative_closest_point/build/CMakeFiles/ALL_BUILD.rule;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/iterative_closest_point/build/CMakeFiles/ALL_BUILD.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\iterative_closest_point\build\CMakeFiles\ALL_BUILD</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\iterative_closest_point\build\CMakeFiles\ALL_BUILD</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Build all projects</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Build all projects</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/iterative_closest_point/build/CMakeFiles/ALL_BUILD.rule;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/iterative_closest_point/build/CMakeFiles/ALL_BUILD.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\iterative_closest_point\build\CMakeFiles\ALL_BUILD</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\iterative_closest_point\build\CMakeFiles\ALL_BUILD</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Build all projects</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Build all projects</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/iterative_closest_point/build/CMakeFiles/ALL_BUILD.rule;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/iterative_closest_point/build/CMakeFiles/ALL_BUILD.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\iterative_closest_point\build\CMakeFiles\ALL_BUILD</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\iterative_closest_point\build\CMakeFiles\ALL_BUILD</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Build all projects</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Build all projects</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/iterative_closest_point/build/CMakeFiles/ALL_BUILD.rule;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/iterative_closest_point/build/CMakeFiles/ALL_BUILD.rule;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\iterative_closest_point\build\CMakeFiles\ALL_BUILD</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\iterative_closest_point\build\CMakeFiles\ALL_BUILD</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\source\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/iterative_closest_point/source/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/iterative_closest_point/source/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\CMake 2.8\bin\cmake.exe" -HC:/iterative_closest_point/source -BC:/iterative_closest_point/build --check-stamp-file C:\iterative_closest_point\build\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake 2.8\bin\cmake.exe" -HC:/iterative_closest_point/source -BC:/iterative_closest_point/build --check-stamp-file C:\iterative_closest_point\build\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/iterative_closest_point/source/CMakeLists.txt;C:\iterative_closest_point\source\CMakeLists.txt;C:\iterative_closest_point\build\CMakeFiles\CMakeSystem.cmake;C:\iterative_closest_point\build\CMakeFiles\CMakeCCompiler.cmake;C:\iterative_closest_point\build\CMakeFiles\CMakeCXXCompiler.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCInformation.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-cl.cmake;C:\iterative_closest_point\build\CMakeFiles\CMakeCPlatform.cmake;C:\iterative_closest_point\build\CMakeFiles\CMakeCXXPlatform.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\cl.cmake;C:\iterative_closest_point\build\CMakeFiles\CMakeRCCompiler.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-cl.cmake;C:\iterative_closest_point\build\CMakeFiles\CMakeCPlatform.cmake;C:\iterative_closest_point\build\CMakeFiles\CMakeCXXPlatform.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\cl.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\PCL 1.3.1\cmake\PCLConfigVersion.cmake;C:\Program Files\PCL 1.3.1\cmake\PCLConfig.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindBoost.cmake;c:\Program Files\PCL 1.3.1\3rdParty\Boost\share\cmake\boost\BoostConfigVersion.cmake;c:\Program Files\PCL 1.3.1\3rdParty\Boost\share\boost-1.46.1\cmake\BoostConfigVersion.cmake;c:\Program Files\PCL 1.3.1\3rdParty\Boost\share\boost-1.47.0\cmake\BoostConfigVersion.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindVTK.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\VTKConfigVersion.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\VTKConfig.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\VTKTargets.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\VTKTargets-debug.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\VTKTargets-release.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\UseVTK.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeImportBuildSettings.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\CMake\vtkMakeInstantiator.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindVTK.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\VTKConfigVersion.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\VTKConfig.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\UseVTK.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindVTK.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\VTKConfigVersion.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\VTKConfig.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\UseVTK.cmake;C:\iterative_closest_point\source\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/iterative_closest_point/source/CMakeLists.txt;C:\iterative_closest_point\source\CMakeLists.txt;C:\iterative_closest_point\build\CMakeFiles\CMakeSystem.cmake;C:\iterative_closest_point\build\CMakeFiles\CMakeCCompiler.cmake;C:\iterative_closest_point\build\CMakeFiles\CMakeCXXCompiler.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCInformation.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-cl.cmake;C:\iterative_closest_point\build\CMakeFiles\CMakeCPlatform.cmake;C:\iterative_closest_point\build\CMakeFiles\CMakeCXXPlatform.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\cl.cmake;C:\iterative_closest_point\build\CMakeFiles\CMakeRCCompiler.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-cl.cmake;C:\iterative_closest_point\build\CMakeFiles\CMakeCPlatform.cmake;C:\iterative_closest_point\build\CMakeFiles\CMakeCXXPlatform.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\cl.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\PCL 1.3.1\cmake\PCLConfigVersion.cmake;C:\Program Files\PCL 1.3.1\cmake\PCLConfig.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindBoost.cmake;c:\Program Files\PCL 1.3.1\3rdParty\Boost\share\cmake\boost\BoostConfigVersion.cmake;c:\Program Files\PCL 1.3.1\3rdParty\Boost\share\boost-1.46.1\cmake\BoostConfigVersion.cmake;c:\Program Files\PCL 1.3.1\3rdParty\Boost\share\boost-1.47.0\cmake\BoostConfigVersion.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindVTK.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\VTKConfigVersion.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\VTKConfig.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\VTKTargets.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\VTKTargets-debug.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\VTKTargets-release.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\UseVTK.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeImportBuildSettings.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\CMake\vtkMakeInstantiator.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindVTK.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\VTKConfigVersion.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\VTKConfig.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\UseVTK.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindVTK.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\VTKConfigVersion.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\VTKConfig.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\UseVTK.cmake;C:\iterative_closest_point\source\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\iterative_closest_point\build\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\iterative_closest_point\build\CMakeFiles\generate.stamp</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/iterative_closest_point/source/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/iterative_closest_point/source/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\CMake 2.8\bin\cmake.exe" -HC:/iterative_closest_point/source -BC:/iterative_closest_point/build --check-stamp-file C:\iterative_closest_point\build\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake 2.8\bin\cmake.exe" -HC:/iterative_closest_point/source -BC:/iterative_closest_point/build --check-stamp-file C:\iterative_closest_point\build\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/iterative_closest_point/source/CMakeLists.txt;C:\iterative_closest_point\source\CMakeLists.txt;C:\iterative_closest_point\build\CMakeFiles\CMakeSystem.cmake;C:\iterative_closest_point\build\CMakeFiles\CMakeCCompiler.cmake;C:\iterative_closest_point\build\CMakeFiles\CMakeCXXCompiler.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCInformation.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-cl.cmake;C:\iterative_closest_point\build\CMakeFiles\CMakeCPlatform.cmake;C:\iterative_closest_point\build\CMakeFiles\CMakeCXXPlatform.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\cl.cmake;C:\iterative_closest_point\build\CMakeFiles\CMakeRCCompiler.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-cl.cmake;C:\iterative_closest_point\build\CMakeFiles\CMakeCPlatform.cmake;C:\iterative_closest_point\build\CMakeFiles\CMakeCXXPlatform.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\cl.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\PCL 1.3.1\cmake\PCLConfigVersion.cmake;C:\Program Files\PCL 1.3.1\cmake\PCLConfig.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindBoost.cmake;c:\Program Files\PCL 1.3.1\3rdParty\Boost\share\cmake\boost\BoostConfigVersion.cmake;c:\Program Files\PCL 1.3.1\3rdParty\Boost\share\boost-1.46.1\cmake\BoostConfigVersion.cmake;c:\Program Files\PCL 1.3.1\3rdParty\Boost\share\boost-1.47.0\cmake\BoostConfigVersion.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindVTK.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\VTKConfigVersion.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\VTKConfig.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\VTKTargets.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\VTKTargets-debug.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\VTKTargets-release.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\UseVTK.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeImportBuildSettings.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\CMake\vtkMakeInstantiator.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindVTK.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\VTKConfigVersion.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\VTKConfig.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\UseVTK.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindVTK.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\VTKConfigVersion.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\VTKConfig.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\UseVTK.cmake;C:\iterative_closest_point\source\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/iterative_closest_point/source/CMakeLists.txt;C:\iterative_closest_point\source\CMakeLists.txt;C:\iterative_closest_point\build\CMakeFiles\CMakeSystem.cmake;C:\iterative_closest_point\build\CMakeFiles\CMakeCCompiler.cmake;C:\iterative_closest_point\build\CMakeFiles\CMakeCXXCompiler.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCInformation.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-cl.cmake;C:\iterative_closest_point\build\CMakeFiles\CMakeCPlatform.cmake;C:\iterative_closest_point\build\CMakeFiles\CMakeCXXPlatform.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\cl.cmake;C:\iterative_closest_point\build\CMakeFiles\CMakeRCCompiler.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-cl.cmake;C:\iterative_closest_point\build\CMakeFiles\CMakeCPlatform.cmake;C:\iterative_closest_point\build\CMakeFiles\CMakeCXXPlatform.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\cl.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\PCL 1.3.1\cmake\PCLConfigVersion.cmake;C:\Program Files\PCL 1.3.1\cmake\PCLConfig.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindBoost.cmake;c:\Program Files\PCL 1.3.1\3rdParty\Boost\share\cmake\boost\BoostConfigVersion.cmake;c:\Program Files\PCL 1.3.1\3rdParty\Boost\share\boost-1.46.1\cmake\BoostConfigVersion.cmake;c:\Program Files\PCL 1.3.1\3rdParty\Boost\share\boost-1.47.0\cmake\BoostConfigVersion.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindVTK.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\VTKConfigVersion.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\VTKConfig.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\VTKTargets.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\VTKTargets-debug.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\VTKTargets-release.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\UseVTK.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeImportBuildSettings.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\CMake\vtkMakeInstantiator.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindVTK.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\VTKConfigVersion.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\VTKConfig.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\UseVTK.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindVTK.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\VTKConfigVersion.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\VTKConfig.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\UseVTK.cmake;C:\iterative_closest_point\source\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\iterative_closest_point\build\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\iterative_closest_point\build\CMakeFiles\generate.stamp</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule C:/iterative_closest_point/source/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/iterative_closest_point/source/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files\CMake 2.8\bin\cmake.exe" -HC:/iterative_closest_point/source -BC:/iterative_closest_point/build --check-stamp-file C:\iterative_closest_point\build\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake 2.8\bin\cmake.exe" -HC:/iterative_closest_point/source -BC:/iterative_closest_point/build --check-stamp-file C:\iterative_closest_point\build\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/iterative_closest_point/source/CMakeLists.txt;C:\iterative_closest_point\source\CMakeLists.txt;C:\iterative_closest_point\build\CMakeFiles\CMakeSystem.cmake;C:\iterative_closest_point\build\CMakeFiles\CMakeCCompiler.cmake;C:\iterative_closest_point\build\CMakeFiles\CMakeCXXCompiler.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCInformation.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-cl.cmake;C:\iterative_closest_point\build\CMakeFiles\CMakeCPlatform.cmake;C:\iterative_closest_point\build\CMakeFiles\CMakeCXXPlatform.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\cl.cmake;C:\iterative_closest_point\build\CMakeFiles\CMakeRCCompiler.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-cl.cmake;C:\iterative_closest_point\build\CMakeFiles\CMakeCPlatform.cmake;C:\iterative_closest_point\build\CMakeFiles\CMakeCXXPlatform.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\cl.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\PCL 1.3.1\cmake\PCLConfigVersion.cmake;C:\Program Files\PCL 1.3.1\cmake\PCLConfig.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindBoost.cmake;c:\Program Files\PCL 1.3.1\3rdParty\Boost\share\cmake\boost\BoostConfigVersion.cmake;c:\Program Files\PCL 1.3.1\3rdParty\Boost\share\boost-1.46.1\cmake\BoostConfigVersion.cmake;c:\Program Files\PCL 1.3.1\3rdParty\Boost\share\boost-1.47.0\cmake\BoostConfigVersion.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindVTK.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\VTKConfigVersion.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\VTKConfig.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\VTKTargets.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\VTKTargets-debug.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\VTKTargets-release.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\UseVTK.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeImportBuildSettings.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\CMake\vtkMakeInstantiator.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindVTK.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\VTKConfigVersion.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\VTKConfig.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\UseVTK.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindVTK.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\VTKConfigVersion.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\VTKConfig.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\UseVTK.cmake;C:\iterative_closest_point\source\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/iterative_closest_point/source/CMakeLists.txt;C:\iterative_closest_point\source\CMakeLists.txt;C:\iterative_closest_point\build\CMakeFiles\CMakeSystem.cmake;C:\iterative_closest_point\build\CMakeFiles\CMakeCCompiler.cmake;C:\iterative_closest_point\build\CMakeFiles\CMakeCXXCompiler.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCInformation.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-cl.cmake;C:\iterative_closest_point\build\CMakeFiles\CMakeCPlatform.cmake;C:\iterative_closest_point\build\CMakeFiles\CMakeCXXPlatform.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\cl.cmake;C:\iterative_closest_point\build\CMakeFiles\CMakeRCCompiler.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-cl.cmake;C:\iterative_closest_point\build\CMakeFiles\CMakeCPlatform.cmake;C:\iterative_closest_point\build\CMakeFiles\CMakeCXXPlatform.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\cl.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\PCL 1.3.1\cmake\PCLConfigVersion.cmake;C:\Program Files\PCL 1.3.1\cmake\PCLConfig.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindBoost.cmake;c:\Program Files\PCL 1.3.1\3rdParty\Boost\share\cmake\boost\BoostConfigVersion.cmake;c:\Program Files\PCL 1.3.1\3rdParty\Boost\share\boost-1.46.1\cmake\BoostConfigVersion.cmake;c:\Program Files\PCL 1.3.1\3rdParty\Boost\share\boost-1.47.0\cmake\BoostConfigVersion.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindVTK.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\VTKConfigVersion.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\VTKConfig.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\VTKTargets.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\VTKTargets-debug.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\VTKTargets-release.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\UseVTK.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeImportBuildSettings.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\CMake\vtkMakeInstantiator.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindVTK.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\VTKConfigVersion.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\VTKConfig.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\UseVTK.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindVTK.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\VTKConfigVersion.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\VTKConfig.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\UseVTK.cmake;C:\iterative_closest_point\source\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\iterative_closest_point\build\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\iterative_closest_point\build\CMakeFiles\generate.stamp</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule C:/iterative_closest_point/source/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/iterative_closest_point/source/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\CMake 2.8\bin\cmake.exe" -HC:/iterative_closest_point/source -BC:/iterative_closest_point/build --check-stamp-file C:\iterative_closest_point\build\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake 2.8\bin\cmake.exe" -HC:/iterative_closest_point/source -BC:/iterative_closest_point/build --check-stamp-file C:\iterative_closest_point\build\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/iterative_closest_point/source/CMakeLists.txt;C:\iterative_closest_point\source\CMakeLists.txt;C:\iterative_closest_point\build\CMakeFiles\CMakeSystem.cmake;C:\iterative_closest_point\build\CMakeFiles\CMakeCCompiler.cmake;C:\iterative_closest_point\build\CMakeFiles\CMakeCXXCompiler.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCInformation.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-cl.cmake;C:\iterative_closest_point\build\CMakeFiles\CMakeCPlatform.cmake;C:\iterative_closest_point\build\CMakeFiles\CMakeCXXPlatform.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\cl.cmake;C:\iterative_closest_point\build\CMakeFiles\CMakeRCCompiler.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-cl.cmake;C:\iterative_closest_point\build\CMakeFiles\CMakeCPlatform.cmake;C:\iterative_closest_point\build\CMakeFiles\CMakeCXXPlatform.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\cl.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\PCL 1.3.1\cmake\PCLConfigVersion.cmake;C:\Program Files\PCL 1.3.1\cmake\PCLConfig.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindBoost.cmake;c:\Program Files\PCL 1.3.1\3rdParty\Boost\share\cmake\boost\BoostConfigVersion.cmake;c:\Program Files\PCL 1.3.1\3rdParty\Boost\share\boost-1.46.1\cmake\BoostConfigVersion.cmake;c:\Program Files\PCL 1.3.1\3rdParty\Boost\share\boost-1.47.0\cmake\BoostConfigVersion.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindVTK.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\VTKConfigVersion.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\VTKConfig.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\VTKTargets.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\VTKTargets-debug.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\VTKTargets-release.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\UseVTK.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeImportBuildSettings.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\CMake\vtkMakeInstantiator.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindVTK.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\VTKConfigVersion.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\VTKConfig.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\UseVTK.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindVTK.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\VTKConfigVersion.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\VTKConfig.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\UseVTK.cmake;C:\iterative_closest_point\source\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/iterative_closest_point/source/CMakeLists.txt;C:\iterative_closest_point\source\CMakeLists.txt;C:\iterative_closest_point\build\CMakeFiles\CMakeSystem.cmake;C:\iterative_closest_point\build\CMakeFiles\CMakeCCompiler.cmake;C:\iterative_closest_point\build\CMakeFiles\CMakeCXXCompiler.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCInformation.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-cl.cmake;C:\iterative_closest_point\build\CMakeFiles\CMakeCPlatform.cmake;C:\iterative_closest_point\build\CMakeFiles\CMakeCXXPlatform.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\cl.cmake;C:\iterative_closest_point\build\CMakeFiles\CMakeRCCompiler.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\Windows-cl.cmake;C:\iterative_closest_point\build\CMakeFiles\CMakeCPlatform.cmake;C:\iterative_closest_point\build\CMakeFiles\CMakeCXXPlatform.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\Platform\cl.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\PCL 1.3.1\cmake\PCLConfigVersion.cmake;C:\Program Files\PCL 1.3.1\cmake\PCLConfig.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindPackageMessage.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindBoost.cmake;c:\Program Files\PCL 1.3.1\3rdParty\Boost\share\cmake\boost\BoostConfigVersion.cmake;c:\Program Files\PCL 1.3.1\3rdParty\Boost\share\boost-1.46.1\cmake\BoostConfigVersion.cmake;c:\Program Files\PCL 1.3.1\3rdParty\Boost\share\boost-1.47.0\cmake\BoostConfigVersion.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindVTK.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\VTKConfigVersion.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\VTKConfig.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\VTKTargets.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\VTKTargets-debug.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\VTKTargets-release.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\UseVTK.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\CMakeImportBuildSettings.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\CMake\vtkMakeInstantiator.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindVTK.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\VTKConfigVersion.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\VTKConfig.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\UseVTK.cmake;C:\Program Files\CMake 2.8\share\cmake-2.8\Modules\FindVTK.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\VTKConfigVersion.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\VTKConfig.cmake;C:\Program Files\PCL 1.3.1\3rdParty\VTK 5.8.0\lib\vtk-5.8\UseVTK.cmake;C:\iterative_closest_point\source\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\iterative_closest_point\build\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\iterative_closest_point\build\CMakeFiles\generate.stamp</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\iterative_closest_point\build\CMakeFiles\ALL_BUILD" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:/iterative_closest_point/build/ZERO_CHECK.vcxproj">
+      <Project>47BF79F1-4010-4B25-8D05-DC8D7815C76E</Project>
+    </ProjectReference>
+    <ProjectReference Include="C:/iterative_closest_point/build/iterative_closest_point.vcxproj">
+      <Project>E6480FC0-56D4-48AB-AA21-F25A275FD855</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
