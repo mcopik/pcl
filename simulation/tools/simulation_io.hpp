@@ -4,9 +4,20 @@
 #include <boost/shared_ptr.hpp>
 
 #include <GL/glew.h>
-#include <GL/gl.h>
-#include <GL/glu.h>
-#include <GL/glut.h>
+
+#include <pcl/pcl_config.h>
+#ifdef OPENGL_IS_A_FRAMEWORK
+# include <OpenGL/gl.h>
+# include <OpenGL/glu.h>
+#else
+# include <GL/gl.h>
+# include <GL/glu.h>
+#endif
+#ifdef GLUT_IS_A_FRAMEWORK
+# include <GLUT/glut.h>
+#else
+# include <GL/glut.h>
+#endif
 
 // define the following in order to eliminate the deprecated headers warning
 #define VTK_EXCLUDE_STRSTREAM_HEADERS
@@ -23,7 +34,7 @@ namespace pcl
 {
   namespace simulation
   {
-    class SimExample
+    class PCL_EXPORTS SimExample
     {
       public:
         typedef boost::shared_ptr<SimExample> Ptr;
